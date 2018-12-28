@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/uiControlBar"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="307dp" >
+
+        <cn.geobeans.earth.EGLview
+            android:id="@+id/surfaceGLES"
+            android:layout_width="fill_parent"
+            android:layout_height="306dp"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/uiBtnClearMeasure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="清空" />
+
+            <Button
+                android:id="@+id/uibtnDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="距离" />
+
+            <Button
+                android:id="@+id/uibtnArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="面积" />
+
+            <Button
+                android:id="@+id/uibtnDelLyr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="删除" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/uibtnArmy10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="窄箭" />
+
+            <Button
+                android:id="@+id/uibtnArmy13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="箭头" />
+
+            <Button
+                android:id="@+id/uibtnArmy8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="双箭" />
+
+            <Button
+                android:id="@+id/uibtnPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地标" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/uibtnVecterLayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="shp" />
+
+            <Button
+                android:id="@+id/uiButtonCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/uiButtonCenter" />
+
+            <Button
+                android:id="@+id/uibtnLos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通视" />
+
+            <Button
+                android:id="@+id/uibtnRadial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="视域" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/uibtnLineColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="线色" />
+
+            <Button
+                android:id="@+id/uibtnLineWidth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="线宽" />
+
+            <Button
+                android:id="@+id/uibtnFillColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="填色" />
+
+            <Button
+                android:id="@+id/uibtnModel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="模型" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/uibtnPlaceTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标签" />
+
+            <Button
+                android:id="@+id/uibtnPlaceIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ICON" />
+
+            <Button
+                android:id="@+id/uibtnJbLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="军标" />
+
+            <Button
+                android:id="@+id/uibtnLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="画线" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/uibtnDeclutter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="碰撞" />
+
+            <Button
+                android:id="@+id/uibtnAddLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="折线" />
+
+            <Button
+                android:id="@+id/uibtnLineStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="虚线" />
+
+            <Button
+                android:id="@+id/uibtnLineDash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dash" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

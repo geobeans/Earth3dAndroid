@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+environment/project/com.android.toolchain.gcc.1502781527/CYGWIN/delimiter=;
+environment/project/com.android.toolchain.gcc.1502781527/CYGWIN/operation=replace
+environment/project/com.android.toolchain.gcc.1502781527/CYGWIN/value=C\:\\cygwin64\\bin
+environment/project/com.android.toolchain.gcc.1502781527/NDKROOT/delimiter=;
+environment/project/com.android.toolchain.gcc.1502781527/NDKROOT/operation=replace
+environment/project/com.android.toolchain.gcc.1502781527/NDKROOT/value=C\:\\cygwin64\\home\\jinping\\android\\android-ndk-r8b
+environment/project/com.android.toolchain.gcc.1502781527/append=true
+environment/project/com.android.toolchain.gcc.1502781527/appendContributed=true
