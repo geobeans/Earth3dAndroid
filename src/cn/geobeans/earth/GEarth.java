@@ -78,6 +78,9 @@ public class GEarth {
     public static native void       setActiveLayer(String grp);
     public static native void       setDeclutter(String grp);
     
+    public static native void       setViewPoint(String name,double lon,double lat,double alt,double heading,double pitch,double range,double duration);
+    public static native ViewPoint  getViewPoint();
+    
     public static void displayInfo(String layer, String id, int ty){
 //    	System.out.println(lat + ";" + lon);
 //    	earthListener.onEarthPick(layer, id, lat, lon, description);
