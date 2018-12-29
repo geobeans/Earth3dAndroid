@@ -112,6 +112,9 @@ public:
 	bool toMapPoint(int x, int y, double &dlon, double &dlat, double &dele);
 	bool fromMapPoint(double dlon, double dlat, double dele, int &x, int &y);
 
+	void setViewPoint(const osgEarth::Viewpoint &v,double duration);
+	osgEarth::Viewpoint getViewpoint();
+
 	void startEdit(std::string grp,std::string id);
 	void setDeclutter(std::string grp);
     JNIEnv * _genv;

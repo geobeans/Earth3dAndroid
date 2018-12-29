@@ -287,3 +287,13 @@ void GeoMainApp::setLineDash(int dash,int gap)
 {
 	_scene->setLineDash(dash,gap);
 }
+
+void GeoMainApp::setViewPoint(const osgEarth::Viewpoint &v,double duration)
+{
+	_scene->setViewPoint(v, duration);
+}
+
+osgEarth::Viewpoint GeoMainApp::getViewpoint()
+{
+	return _scene->getViewpoint();
+}
