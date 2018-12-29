@@ -74,6 +74,10 @@ extern "C" {
     JNIEXPORT jobject JNICALL Java_cn_geobeans_earth_GEarth_fromMapPoint(JNIEnv * env, jobject obj, jdouble lon,jdouble lat,jdouble ele);
     JNIEXPORT void JNICALL Java_cn_geobeans_earth_GEarth_startEdit(JNIEnv * env, jobject obj, jstring grp,jstring id);
     JNIEXPORT void JNICALL Java_cn_geobeans_earth_GEarth_setDeclutter(JNIEnv * env, jobject obj, jstring grp);
+
+    JNIEXPORT jobject JNICALL Java_cn_geobeans_earth_GEarth_getViewPoint(JNIEnv * env, jobject obj);
+    JNIEXPORT void JNICALL Java_cn_geobeans_earth_GEarth_setViewPoint(JNIEnv * env, jobject obj, jstring name,jdouble lon,jdouble lat,jdouble alt,jdouble heading,jdouble pitch,jdouble range,jdouble duration);
+
 };
 
 JNIEXPORT void JNICALL Java_cn_geobeans_earth_GEarth_init(JNIEnv * env, jobject obj, jint width, jint height){
@@ -583,5 +587,35 @@ JNIEXPORT void JNICALL Java_cn_geobeans_earth_GEarth_setLineDash(JNIEnv * env, j
 {
 	mainApp.setLineDash(dash,gap);
 }
+
+JNIEXPORT jobject JNICALL Java_cn_geobeans_earth_GEarth_getViewPoint(JNIEnv * env, jobject obj)
+{
+    osgEarth::Viewpoint vp = mainApp.getViewpoint();
+
+	jclass cls = env->FindClass("cn/geobeans/earth/ViewPoint");
+	jmethodID mid = env->GetMethodID(cls, "<init>", "(Ljava/lang/String;DDDDDD)V");
+
+	std::string nm = vp.getName();
+	double dx = vp.x();
+	double dy = vp.y();
+	double dz = vp.z();
+	double heading = vp.getHeading();
+	double pitch = vp.getPitch();
+	double range = vp.getRange();
+	jstring strNm = env->NewStringUTF(nm.c_str());
+
+	jobject paramOut = env->NewObject(cls, mid, strNm,dx,dy,dz,heading,pitch,range);
+	return paramOut;
+}
+
+JNIEXPORT void JNICALL Java_cn_geobeans_earth_GEarth_setViewPoint(JNIEnv * env, jobject obj, jstring name,jdouble lon,jdouble lat,jdouble alt,jdouble heading,jdouble pitch,jdouble range,jdouble duration)
+{
+	const char *nativeName = env->GetStringUTFChars(name, NULL);
+
+	osgEarth::Viewpoint v(name,lon,lat,alt,heading,pitch,range);
+	mainApp.setViewPoint(v, duration);
+	env->ReleaseStringUTFChars(name, nativeName);
+}
+
 
 
