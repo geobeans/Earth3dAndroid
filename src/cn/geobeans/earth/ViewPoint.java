@@ -19,4 +19,9 @@ public class ViewPoint {
 		this.pitch = pitch;
 		this.range = range;
 	}
+	
+	void flyTo(double duration)
+	{
+		GEarth.setViewPoint(name, lon, lat, alt, heading, pitch, range, duration);
+	}
 }
