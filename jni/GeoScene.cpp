@@ -1775,3 +1775,17 @@ void GeoScene::setDeclutter(std::string grp)
 		//osgEarth::Annotation::Decluttering::setEnabled( nd->getOrCreateStateSet(), true );
 	}
 }
+
+void GeoScene::setViewPoint(const osgEarth::Viewpoint &v,double duration)
+{
+	if(_manip){
+		_manip->setViewpoint(v, duration);
+	}
+}
+
+osgEarth::Viewpoint GeoScene::getViewpoint()
+{
+	if(_manip){
+		return _manip->getViewpoint();
+	}
+}
